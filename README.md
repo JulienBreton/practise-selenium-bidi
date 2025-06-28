@@ -1,36 +1,6 @@
-# WebDriver TestNG Project
+# Selenium Bidi
 
-This project is generated from an archetype. It exists out of TestNG, Selenium WebDriver, Allure and OWNER as the main dependencies.
+L'objectif de ce projet est d'apprendre à utiliser les possibilités offertes par WebDriver Bidi.
 
-
-## Run tests
-
-`mvn clean test`
-
-## Run tests in specific browser
-
-`mvn clean test -Dbrowser=chrome`
-
-`mvn clean test -Dbrowser=firefox`
-
-`mvn clean test -Dbrowser=edge`
-
-`mvn clean test -Dbrowser=chrome_headless`
-
-`mvn clean test -Dbrowser=firefox_headless`
-
-## Generate report
-
-`mvn allure:report`
-
-## Serve report
-
-`mvn allure:serve`
-
-## Check for dependency updates
-
-`mvn versions:display-dependency-updates`
-
-## Update to the latest release version
-
-`versions:update-properties`
+- [x] BasiAuth : permet de se connecter à une URL protégée par un htaccess. Le Webdriver intercepte la demande d'authentification et envoie les identifiants. Avec cette méthode il n'est plus nécessaire de transmettre les identifiants dans l'URL. Il est toujours possible d'envoyer les identifiants dans l'URL car les navigateurs désactivent les contrôles de sécurité pour faciliter les tests mais cela ne sera peut-être pas toujours le cas.
+- [ ] user_context : permet d'exécuter plusieurs sessions au sein de la même instance du navigateur. Les epaces d'exécutions sont isolés. Cela permet d'économiser des ressources et d'augmenter le nombre de tests qui sont exécutes en parralléle.
