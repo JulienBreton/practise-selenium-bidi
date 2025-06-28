@@ -24,21 +24,16 @@ public abstract class TestBase {
 	public void setup() {
 		final String browser = System.getProperty("browser", "firefox_bidi");
 		WebDriver originalDriver = BrowserUtil.createDriver(browser);
-		driver.set(new EventFiringDecorator<WebDriver>(
-                new WebDriverLoggingListener(),
-                new SavePageSourceOnExceptionListener(originalDriver, "target/log/pagesources"),
-                new SaveScreenshotOnExceptionListener(originalDriver, "target/log/screenshots"),
-                new HighlightElementsListener()
-        ).decorate(originalDriver));
+		driver.set(new EventFiringDecorator<WebDriver>(new WebDriverLoggingListener(),
+				new SavePageSourceOnExceptionListener(originalDriver, "target/log/pagesources"),
+				new SaveScreenshotOnExceptionListener(originalDriver, "target/log/screenshots"),
+				new HighlightElementsListener()).decorate(originalDriver));
 		driver.set(originalDriver);
 		originalDriver.manage().window().maximize();
 		network = new Network(originalDriver);
 		network.addIntercept(new AddInterceptParameters(InterceptPhase.AUTH_REQUIRED));
-		network.onAuthRequired(
-				responseDetails ->
-				network.continueWithAuth(
-						responseDetails.getRequest().getRequestId(),
-						new UsernameAndPassword("admin", "admin")));
+		network.onAuthRequired(responseDetails -> network.continueWithAuth(responseDetails.getRequest().getRequestId(),
+				new UsernameAndPassword("admin", "admin")));
 	}
 
 	@AfterClass

@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tests pour Bidi User Context">
+  <test name="Tests User Context">
+    <classes>
+      <class name="org.julienbreton.testscripts.BidiUserContextTest">
+      	<methods>
+      		<include name="canSwitchToBlue" />
+      		<include name="canSwitchToGreen" />
+      		<include name="canHaveTheDefaultBackgroundColor" />		
+      	</methods>
+      </class>
+    </classes>
+  </test>
+</suite>

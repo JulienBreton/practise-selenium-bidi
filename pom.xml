@@ -95,8 +95,9 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <suiteXmlFiles>
-       		 			<!--<suiteXmlFile>src/test/resources/testng_toolshop.xml</suiteXmlFile>-->
-       		 			<suiteXmlFile>src/test/resources/testng_bidi.xml</suiteXmlFile>
+       		 			-<suiteXmlFile>src/test/resources/testng_toolshop.xml</suiteXmlFile>
+       		 			<suiteXmlFile>src/test/resources/testng_bidi_basicauth.xml</suiteXmlFile>
+       		 			<suiteXmlFile>src/test/resources/testng_bidi_usercontext.xml</suiteXmlFile>
     				</suiteXmlFiles>
                 </configuration>
                 <dependencies>

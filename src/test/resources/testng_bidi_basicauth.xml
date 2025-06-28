@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Tests pour Bidi">
+<suite name="Tests pour Bidi Basic Auth">
   <test name="Tests Basic Auth">
     <classes>
       <class name="org.julienbreton.testscripts.BidiBasicAuthTest">

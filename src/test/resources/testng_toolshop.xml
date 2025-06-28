@@ -5,7 +5,7 @@
       <class name="org.julienbreton.testscripts.ToolshopTest">
       	<methods>
       		<include name="verifySignInButton" />
-      		<include name="verifySignInButton_failOnPurpose" /> 			
+      		<!--<include name="verifySignInButton_failOnPurpose" />-->	
       	</methods>
       </class>
     </classes>
