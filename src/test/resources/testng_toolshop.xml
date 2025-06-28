@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tests pour Toolshop">
+  <test name="Tests bouton de connexion">
+    <classes>
+      <class name="org.julienbreton.testscripts.ToolshopTest">
+      	<methods>
+      		<include name="verifySignInButton" />
+      		<include name="verifySignInButton_failOnPurpose" /> 			
+      	</methods>
+      </class>
+    </classes>
+  </test>
+</suite>

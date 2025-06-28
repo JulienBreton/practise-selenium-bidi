@@ -1,0 +1,5 @@
+.allure/
+target/
+.settings/
+.project
+.classpath

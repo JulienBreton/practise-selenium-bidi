@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Tests pour Bidi">
+  <test name="Tests Basic Auth">
+    <classes>
+      <class name="org.julienbreton.testscripts.BidiBasicAuthTest">
+      	<methods>
+      		<include name="verifyBasicAuth" /> 		
+      	</methods>
+      </class>
+    </classes>
+  </test>
+</suite>
